@@ -431,4 +431,121 @@ class App extends Component {
 @import '~antd/dist/antd.css';
 ...
 ```
-d
+
+好了，Ant Design中的所有组件已经可以随意使用了。可以入天鲜配后台前端的坑了。
+
+- 想要写个输入框 ? =====> [Input](https://ant.design/components/input-cn)
+* 想要写个表格 ? =======> [Table](https://ant.design/components/table-cn)
+- 想要写个提示 ? =====> [Alert](https://ant.design/components/alert-cn)
+* 想要写个对话框 ? =====> [Modal](https://ant.design/components/modal-cn)
+- .......这里有所有你可以使用的[组件](https://ant.design/docs/react/introduce-cn)
+
+## React Router
+
+完整的 React 路由解决方案 ~~ 官宣的！它能让保持 UI 与 URL 同步 ！ 
+
+### Guide
+推荐 React Router 官方入门教程 [React Training -- react-router](https://reacttraining.com/react-router/web/guides/quick-start)。
+
+#### 安装
+- `npm i --save react-router-dom`
+- `cnpm i --save react-router-dom`
+- `yarn add react-router-dom`
+
+#### 最最最最最基础的用法
+
+```jsx
+import React from 'react';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+
+function Home() {
+  return <div>Home</div>
+}
+
+function User() {
+  return <div>User</div>
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/user">User</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <hr />
+
+      <Route exact path="/" component={Home} />
+      <Route exact path="/user" component={User} />
+    </BrowserRouter>
+  )
+}
+
+ReactDOM.render(<App />, document.getElementById('root'));
+```
+
+#### 稍微高级一下 - 来个 Nested Routing
+
+```jsx
+import React from 'react';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
+
+function Home() {
+  return <div>Home</div>
+}
+
+function User() {
+  return <div>User</div>
+}
+
+const SITE_LIST = ['Alibaba', 'Tencent', 'Apple', 'XiaoMi']
+
+function Site({ match }) {
+  const { id } = match.params
+  return (
+    <div>Site: {id !== '-1' ? SITE_LIST[id] : 'you can choose one first'}</div>
+  )
+}
+
+export default function App() {
+  return (
+    <BrowserRouter>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/user">User</Link>
+          </li>
+          <li>
+            <Link to={`/site/-1`}>Site</Link>
+            <ul>
+              {SITE_LIST.map((s, i) => (
+                <li key={i}>
+                  <Link to={`/site/${i}`}>{s}</Link>
+                </li>
+              ))}
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <hr />
+
+      <Route exact path="/" component={Home} />
+      <Route exact path="/user" component={User} />
+      <Route path="/site/:id" component={Site} />
+    </BrowserRouter>
+  )
+}
+```
+
+_PS: 有时候用 NavLink 替换 Link 会有惊喜_
