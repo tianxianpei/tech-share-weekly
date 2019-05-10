@@ -62,7 +62,7 @@
     - 路径：选择项目 -> 选择数据集成 -> 同步资源管理 -> 数据源
       - 按照官方文档新增即可
       - 数据源列表
-      - ![image.png](https://cdn.nlark.com/yuque/0/2019/png/174740/1557468319814-8a6570fb-c3a1-457e-af1a-642951224453.png#align=left&display=inline&height=331&name=image.png&originHeight=661&originWidth=1703&size=509825&status=done&width=851.5)
+      - 
   - 批量数据上云（4）
     - 路径：选择项目 -> 选择数据集成 -> 同步资源管理 -> 数据源 -> 整库数据迁移
       - ![image.png](https://cdn.nlark.com/yuque/0/2019/png/174740/1557468426464-d6ae6c20-2668-4aee-9fa4-35dfe7f92229.png#align=left&display=inline&height=476&name=image.png&originHeight=951&originWidth=1730&size=291047&status=done&width=865)
