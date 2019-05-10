@@ -11,4 +11,4 @@
 * 2019-05-05 [@fanbowen12321](https://github.com/fanbowen12321) -  [函数式编程浅析](https://www.cnblogs.com/fbw-gxy/p/10812331.html)
 * 2019-05-10 [@fanbowen12321](https://github.com/fanbowen12321) -  [生活日用算法之NIM博弈](https://www.cnblogs.com/fbw-gxy/p/10844129.html)
 * 2019-05-10 [@zhaolg](https://github.com/zhaolg) -  [ODPS（MaxCompute）基础教程](https://github.com/tianxianpei/tech-share-weekly/blob/master/article/ODPS（MaxCompute）基础教程.md)
-* 2019-05-10 [@zhaolg](https://github.com/haipengliang) -  [JPA查询方式](https://github.com/tianxianpei/tech-share-weekly/blob/master/article/2019-05-09_jpa查询方式.md)
+* 2019-05-10 [@haipengliang](https://github.com/haipengliang) -  [JPA查询方式](https://github.com/tianxianpei/tech-share-weekly/blob/master/article/2019-05-09_jpa查询方式.md)
